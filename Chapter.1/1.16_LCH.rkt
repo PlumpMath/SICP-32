@@ -11,4 +11,5 @@
 (define (square n)
   (* n n))
 
+; tests
 (fast-expt 3 5)
