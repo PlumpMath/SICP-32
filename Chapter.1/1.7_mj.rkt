@@ -2,4 +2,4 @@
 
 (require "1.6_mj.rkt")
 
-(sqrt-iter 100.0 1000)
+(sqrt-iter 1.0 1000)
