@@ -1,5 +1,7 @@
 #lang racket
 
+(provide (rename-out [union-set union-list-set]))
+
 ; O(n) 으로 union-set procedure 짜는 문제였다.
 
 (define (union-set set1 set2)
