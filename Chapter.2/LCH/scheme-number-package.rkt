@@ -22,6 +22,7 @@
        (lambda (x y) (equal? x y)))
   (put '=zero? '(scheme-number)
        (lambda (x) (= x 0)))
+  (put 'super-type 'scheme-number 'complex)
   'done)
 
 ; install

@@ -46,6 +46,7 @@
                           (= (denom x) (denom y)))))
   (put '=zero? '(rational)
        (lambda (x) (= (numer x) 0)))
+  (put 'super-type 'rational 'scheme-number)
   'done)
 
 ; install

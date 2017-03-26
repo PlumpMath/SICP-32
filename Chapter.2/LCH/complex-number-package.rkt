@@ -62,6 +62,7 @@
   (put '=zero? '(complex)
        (lambda (z) (and (= (real-part z) 0)
                         (= (imag-part z) 0))))
+  (put 'super-type 'complex null)
   'done)
 
 ; install
