@@ -5,6 +5,8 @@
 (require "table.rkt")
 (require "tag.rkt")
 
+(provide apply-generic)
+
 (define (apply-generic op . args)
   (let ((type-tags (map type-tag args)))
     (let ((proc (get op type-tags)))
