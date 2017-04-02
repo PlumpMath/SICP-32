@@ -11,29 +11,7 @@
 ;iﬁed by the procedure. Now, within this new environment, evaluate the procedure body.
 
 ;Exercise 3.9
-(define (factorial n) (if (= n 1) 1 (* n (factorial (- n 1)))))
-
-;(factorial 6)
-;1. E1, n is bound to 6
-;2. goes into E2, n is bound to 5
-;3. goes into E3, n is bound to 4
-;...
-;6. goes into E6, n is bound to 1, in which case (factorial 1) returns 1
-;goes back to 5, 4, 3, 2, 1 and exits
-
-(define (factorial n)
-  (fact-iter 1 1 n))
-
-(define (fact-iter product counter max-count)
-  (if (> counter max-count)
-      product
-      (fact-iter (* counter product)
-                 (+ counter 1)
-                 max-count)))
-;1. E1, n is bound to 6
-;2. returns E2(fact-iter), product=1, counter=1, max-count=6
-;3. returns E3(fact-iter), product=1, counter=2, max-count=6
-;...
+;See 3.9 related images in folder images
 
 
 
@@ -56,6 +34,7 @@
 ;ment that is subordinate to the evaluation environment for the enclosing procedure.
 
 ;Execise 3.11
+;See 3.11 related images in folder images
 ;balance, withdraw, deposit, dispatch is kept in a seperate environment
 ;Maybe the procedures are shared between acc and acc2?
 
