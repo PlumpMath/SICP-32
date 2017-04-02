@@ -81,11 +81,16 @@ it somehow refers to a place where a value can be stored. |#
 ((paul-acc 'thisispassword 'withdraw) 10)
 ((peter-acc 'thisispassword 'withdraw) 10)
 ((paul-acc 'thisispasswordtoo 'withdraw) 10)
-((paul-acc 'blunder 'withdraw) 10)
+#|((paul-acc 'blunder 'withdraw) 10)|#
 
 #| Exercise 3.8 (ʘ言ʘ╬) |#
 
+(define (make-f)
+  (let ((x 1))
+    (lambda (int)
+      (begin (set! x (* x int)) x))))
 
+(define f (make-f))
 
-    
-        
+(f 1)
+(f 0)
